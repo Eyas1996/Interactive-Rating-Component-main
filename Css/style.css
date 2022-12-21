@@ -5,12 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Open+Sans&family=Poppins:wght@600&family=Raleway:wght@400;700&display=swap');
 
 :root {
-	--Very-Dark-Blue: hsl(243, 87%, 12%);
-	--Desaturated-Blue: hsl(238, 22%, 44%);
-	--Bright-Blue: hsl(224, 93%, 58%);
-	--Moderate-Cyan: hsl(170, 45%, 43%);
-	--Light-Grayish-Blue: hsl(240, 75%, 98%);
-	--Light-Gray: hsl(0, 0%, 75%);
+	--Very-Dark-Blue: hsl(216, 12%, 8%);
+	--Dark-Blue: hsl(213, 19%, 18%);
+	--White: hsl(0, 0%, 100%);
+	--Medium-Grey: hsl(216, 12%, 54%);
+	--Light-Gray: hsl(217, 12%, 63%);
 	--main-transition: 0.3s;
 }
 * {
@@ -23,6 +22,7 @@ body {
 	margin: 0;
 	font-size: 18px;
 	font-family: 'Open Sans';
+	background-color: var(--Very-Dark-Blue);
 }
 h1,
 h2,
@@ -41,3 +41,25 @@ a {
 img {
 	max-width: 100%;
 }
+
+/* start Rating Card */
+.crad {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	background-color: var(--Dark-Blue);
+	color: #fff;
+	width: 400px;
+	padding: 25px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+/* End Rating Card */
