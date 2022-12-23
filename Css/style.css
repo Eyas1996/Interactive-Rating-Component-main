@@ -62,4 +62,12 @@ img {
 	-ms-border-radius: 20px;
 	-o-border-radius: 20px;
 }
+.crad .star {
+	background-color: #7c879842;
+	width: fit-content;
+	border-radius: 50%;
+}
+.crad img {
+	padding: 6px 6px 3px 6px;
+}
 /* End Rating Card */
