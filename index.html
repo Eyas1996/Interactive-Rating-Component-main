@@ -1,63 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./Css/all.min.css">
   <link rel="stylesheet" href="./Css/style.css">
-  
+
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  
+
   <!-- Rating Card start -->
-  <div class="crad">
+  <div class="card" id="main-card">
     <div class="star">
-        <img src="./images/icon-star.svg" alt="">
+      <img src="./images/icon-star.svg" alt="Star">
     </div>
-    <div class="qu">
-      <h1>How did we do?</h1>
+    <div class="question">
+      <h2>How did we do?</h2>
     </div>
-    <div class="an">
+    <div class="answer">
       <p>
-        Please let us know how we did with your support request. All feedback is appreciated 
+        Please let us know how we did with your support request. All feedback is appreciated
         to help us improve our offering!
       </p>
     </div>
     <div class="numbers">
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>4</span>
-      <span>5</span>
+      <div><span>1</span></div>
+      <div><span>2</span></div>
+      <div><span>3</span></div>
+      <div><span>4</span></div>
+      <div><span>5</span></div>
     </div>
     <div class="submit">
-      <button>SUBMIT</button>
+      <button id="btn">SUBMIT</button>
     </div>
-  
+  </div>
+
   <!-- Rating Card end -->
 
-  
+
+
 
 
   <!-- Thank you state start -->
-
-  <!-- You selected Add rating here out of 5 -->
-
-  <!-- Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch! -->
+  <div class="state">
+    <img src="./images/illustration-thank-you.svg" alt="">
+    <p class="result">You selected 4 out of 5</p>
+    <h2>Thank you!</h2>
+    <p class="thanks">We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!</p>
+  </div>
 
   <!-- Thank you state end -->
   </div>
+  <script>
+    let btn = document.getElementById("btn");
+
+    let main = document.getElementById("main-card");
+    btn.onclick = function () {
+      main.classList.add("z");
+    };
+  </script>
 </body>
+
 </html>
