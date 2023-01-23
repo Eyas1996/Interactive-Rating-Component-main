@@ -8,11 +8,13 @@
   --Light-Gray: hsl(217, 12%, 63%);
   --main-transition: 0.3s;
 }
+
 * {
   -webkit-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -20,19 +22,9 @@ body {
   font-family: "Overpass", sans-serif;
   background-color: var(--Very-Dark-Blue);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h2 {
   margin: 0;
-}
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
 }
 img {
   max-width: 100%;
@@ -40,7 +32,8 @@ img {
 p {
   font-size: 15px;
 }
-.z {
+
+.z-index {
   z-index: -5;
 }
 
@@ -66,6 +59,7 @@ p {
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
 }
+
 .card .star {
   background-color: var(--Medium-Grey);
   width: 50px;
@@ -80,17 +74,20 @@ p {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
 .card .answer p {
   max-width: 365px;
   line-height: 1.7;
   color: var(--Light-Gray);
 }
+
 .card .numbers {
   display: flex;
   justify-content: space-between;
   margin: 25px 0px;
 }
-.card .numbers div {
+
+.card .numbers span {
   background-color: var(--Medium-Grey);
   color: var(--Light-Gray);
   width: 50px;
@@ -110,12 +107,10 @@ p {
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
 }
-.card .numbers div:hover {
+
+.card .numbers span:hover {
   background-color: hsl(25deg 97% 53%);
   color: white;
-}
-.card .numbers div:hover div ~ span {
-  background-color: red;
 }
 
 .card .submit button {
@@ -140,10 +135,12 @@ p {
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
 }
+
 .card .submit button:hover {
-  background-color: var(--White);
-  color: hsl(25deg 97% 53%);
+  background-color: hsl(25deg 97% 53%) !important;
+  color: var(--White) !important;
 }
+
 /* End Rating Card */
 /* Thank you state start */
 .state {
@@ -173,6 +170,7 @@ p {
   text-align: center;
   z-index: -1;
 }
+
 .state .result {
   background-color: var(--Medium-Grey);
   color: hsl(25deg 97% 53%);
@@ -184,9 +182,53 @@ p {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
+
 .state .thanks {
   max-width: 340px;
   line-height: 1.7;
   color: var(--Light-Gray);
 }
+
 /* Thank you state end */
+
+@media (max-width: 520px) {
+  body {
+    font-size: 15px;
+  }
+
+  .card,
+  .state {
+    width: 330px;
+    padding: 30px 35px 35px 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+
+  .card .star {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .card .numbers span {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card .submit button {
+    padding: 15px;
+    margin: 0;
+  }
+
+  .state .result {
+    margin: 35px 0;
+  }
+}

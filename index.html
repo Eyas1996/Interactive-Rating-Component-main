@@ -5,28 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./Css/all.min.css">
   <link rel="stylesheet" href="./Css/style.css">
 
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-
   <!-- Rating Card start -->
   <div class="card" id="main-card">
     <div class="star">
@@ -42,23 +28,17 @@
       </p>
     </div>
     <div class="numbers">
-      <div><span>1</span></div>
-      <div><span>2</span></div>
-      <div><span>3</span></div>
-      <div><span>4</span></div>
-      <div><span>5</span></div>
+      <span id="one" value="1">1</span>
+      <span id="two" value="2">2</span>
+      <span id="three" value="3">3</span>
+      <span id="four" value="4">4</span>
+      <span id="five" value="5">5</span>
     </div>
     <div class="submit">
       <button id="btn">SUBMIT</button>
     </div>
   </div>
-
   <!-- Rating Card end -->
-
-
-
-
-
   <!-- Thank you state start -->
   <div class="state">
     <img src="./images/illustration-thank-you.svg" alt="">
@@ -67,17 +47,9 @@
     <p class="thanks">We appreciate you taking the time to give a rating. If you ever need more support,
       don’t hesitate to get in touch!</p>
   </div>
-
   <!-- Thank you state end -->
   </div>
-  <script>
-    let btn = document.getElementById("btn");
-
-    let main = document.getElementById("main-card");
-    btn.onclick = function () {
-      main.classList.add("z");
-    };
-  </script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
