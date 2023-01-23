@@ -6,7 +6,7 @@
   --White: hsl(0, 0%, 100%);
   --Medium-Grey: hsl(212deg 18% 18%);
   --Light-Gray: hsl(217, 12%, 63%);
-  --main-transition: 0.3s;
+  --main-transition: 0.5s;
 }
 
 * {
@@ -26,9 +26,11 @@ body {
 h2 {
   margin: 0;
 }
+
 img {
   max-width: 100%;
 }
+
 p {
   font-size: 15px;
 }
@@ -87,7 +89,7 @@ p {
   margin: 25px 0px;
 }
 
-.card .numbers span {
+.card .numbers button {
   background-color: var(--Medium-Grey);
   color: var(--Light-Gray);
   width: 50px;
@@ -95,11 +97,23 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  border: none;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.card .numbers button:focus {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
@@ -108,9 +122,14 @@ p {
   -o-transition: var(--main-transition);
 }
 
-.card .numbers span:hover {
-  background-color: hsl(25deg 97% 53%);
-  color: white;
+.card .numbers button:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 
 .card .submit button {
@@ -137,8 +156,8 @@ p {
 }
 
 .card .submit button:hover {
-  background-color: hsl(25deg 97% 53%) !important;
-  color: var(--White) !important;
+  background-color: hsl(0, 0%, 100%) !important;
+  color: hsl(25deg 97% 53%) !important;
 }
 
 /* End Rating Card */
